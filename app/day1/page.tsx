@@ -32,7 +32,8 @@ const DayOnePage = () => {
 		const pictureArrayTotaling = (pictureArray: StaticImageData[] ) => {
 			if(pictureArray.length > 5){
 				setExtraNumber(pictureArray.length - 5)
-				return [...fivePictures, ...plusNumber]
+				// return [...fivePictures, ...plusNumber]
+				return fivePictures
 			}
 		}
 		
