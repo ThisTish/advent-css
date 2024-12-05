@@ -1,0 +1,28 @@
+.tooltip{
+	@apply text-5xl text-red-600 font-bold tracking-wide text-center m-10 font-mono relative;
+}
+
+.tooltip:hover::after{
+	content: attr(data-tooltip);
+	background-color: darkgreen;
+	width: 20%;
+	color: white;
+	font-size: 1.5rem;
+	border-radius: 10px;
+	padding: 5px;
+
+	position: absolute;
+	bottom: -70px;
+	left: 40%;
+}
+
+.tooltip:hover::before{
+	content: '';
+	border-style: solid;
+	border-width: 10px 10px 10px 10px;
+	border-color: transparent   transparent darkgreen transparent;
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+}
